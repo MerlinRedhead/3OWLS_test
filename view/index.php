@@ -1,6 +1,22 @@
 <?php
 //подключение к бд
 $link = mysqli_connect('localhost','root','','3owls');
+//проверка бд,если нет,её создание
+if (!$link){
+    $conn_str= mysqli_connect('localhost', 'root', '');
+    mysqli_query($conn_str, "CREATE DATABASE `3owls` CHARACTER SET utf8 COLLATE utf8_general_ci;");
+    if (mysqli_select_db($conn_str,"3owls"))
+    {
+        mysqli_query($conn_str,"CREATE TABLE  `3owls`.`images` (`id` INT NOT NULL AUTO_INCREMENT ,`imagename` VARCHAR( 250 ),`updatedname` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , PRIMARY KEY (  `id` ));");
+        echo "База данных успешно создана";
+        $link = mysqli_connect('localhost','root','','3owls');
+    }
+    else
+    {
+        echo "База данных не создана";
+    }
+    mysqli_close($conn_str);
+}
 //удаление
 if(isset($_GET['del'])){
     $name = $_GET['del'];
@@ -12,6 +28,7 @@ if(isset($_GET['del'])){
 
     if($unlink == true){ echo "получилось удалить"; } else{ echo "не получилось удалить";}
 }
+// Изменение названия
 if (isset($_POST['Name'])) {
     if (isset($_GET['red'])) {
         $sql = mysqli_query($link, "UPDATE `images` SET `updatedname` = '{$_POST['Name']}' WHERE `id`='{$_GET['red']}'");
