@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="102e272b-adcb-4764-8375-c18d634b352d" name="Changes" comment="create git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/63cd49dbdddd50f4ccf04870c7ba5426.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/Я ТЕБЯ ЛЮЛЮ.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
       <workItem from="1662304407292" duration="2001000" />
       <workItem from="1662376886880" duration="24882000" />
       <workItem from="1662535848330" duration="4908000" />
-      <workItem from="1662546369202" duration="70028000" />
+      <workItem from="1662546369202" duration="71929000" />
     </task>
     <task id="LOCAL-00001" summary="create git">
       <created>1662821587126</created>

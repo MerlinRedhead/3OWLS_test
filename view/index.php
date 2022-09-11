@@ -64,7 +64,9 @@ if (isset($_GET['red'])) {
 
 </form>
 <hr>
-<?php while ($result = mysqli_fetch_array($flag)){
+<?php
+$flag = mysqli_query($link, "SELECT * FROM `images` WHERE `id`='{$_GET['red']}'");
+while ($result = mysqli_fetch_array($flag)){
 ?>
 <form action="" method="post">
     <table>
